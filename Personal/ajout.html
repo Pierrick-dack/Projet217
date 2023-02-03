@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/styleAdd.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Add a field</h1>
+        <div class="inputs">
+            <input type="text" id="input">
+        </div>
+
+        <select>
+            <option value="">Consultation</option>
+            <option value="">Soins</option>
+        </select>
+
+        
+
+        <button class="btn">Add</button>
+    </div>
+
+    <script>
+        let destination = document.querySelector('.inputs');
+        let btn = document.querySelector('.btn');
+        btn.addEventListener('click', add_field);
+
+        function add_field(e){
+            e.preventDefault();
+            destination.innerHTML += '<input type="text" id="input" placeholder="None">'
+            destination.innerHTML += '<select><option>Consultation</option><option>Soins</option></select>'
+        }
+    </script>
+</body>
+</html>
