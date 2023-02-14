@@ -118,6 +118,7 @@
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
       <h2>This app is used to <span>Desgin a bill</span> for any service</h2>
+      <h1>Bienvenu <?php echo $_SESSION['user']; ?></h1>
 
       <nav id="navbar" class="navbar">
         <ul>

@@ -29,7 +29,7 @@ if(isset($_POST['enregistrer']))
                     // $_SESSION['ident_prof']=$userinfo['ident_prof'];
                     // $_SESSION['mdp']=$userinfo['mdp'];
                     $_SESSION['user']=$nom;
-                    header('Location: bulletin.php?reg_err=success');
+                    header('Location: index.php?reg_err=success');
                 
                    
                 }
@@ -117,7 +117,6 @@ if(isset($_POST['enregistrer']))
                     switch($err)
                     {
 
-                        
                         case 'success':
                         ?>
                             <div class="alert alert-success">
