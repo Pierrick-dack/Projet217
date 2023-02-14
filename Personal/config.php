@@ -3,9 +3,9 @@
         
     try 
     {
-        $bdd = new PDO('mysql:host=localhost;dbname=projet_bd', 'root', '');
+        $bdd = new PDO('mysql:host=localhost;dbname=projet217', 'root', '');
         $bdd->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-        //echo 'good';
+        // echo 'good';
     }
     catch(PDOException $e)
     {
