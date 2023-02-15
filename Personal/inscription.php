@@ -9,8 +9,8 @@ if(isset($_POST['enregistrer']))
         
         $nom = htmlspecialchars($_POST['name']);
         $ident = $_POST['ident'];
-        $password = sha1($_POST['mdp']);
-        $password_retype = sha1($_POST['mdpc']);
+        $password = $_POST['mdp'];
+        $password_retype = $_POST['mdpc'];
         
         $ident_length=strlen($ident);
         if($ident_length<=11)
@@ -253,11 +253,11 @@ if(isset($_POST['enregistrer']))
           <br><br>
         
         <div class="col-md-6 form-group ">
-          <input type="text" class="form-control" name="mdp" id="mdp" placeholder="Password" required>
+          <input type="password" class="form-control" name="mdp" id="mdp" placeholder="Password" required>
         </div>
         <br><br>
         <div class="col-md-6 form-group ">
-          <input type="text" class="form-control" name="mdpc" id="mdpc" placeholder="Password retype" required>
+          <input type="password" class="form-control" name="mdpc" id="mdpc" placeholder="Password retype" required>
         </div>
         <br><br>
         <div class="my-3">

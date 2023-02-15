@@ -194,7 +194,7 @@ if(isset($_POST['enregistrer']))
       <nav id="navbar" class="navbar">
         <ul>
           
-          <li><a class="nav-link" href="#contact">Se connecter</a></li>
+          <li><a class="nav-link" href="#contact">Enregistrer les champs</a></li>
           
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -217,8 +217,8 @@ if(isset($_POST['enregistrer']))
     <div class="container">
 
       <div class="section-title">
-        <h2>Connexion</h2>
-        <p>Connecter vous</p>
+        <h2>Enregistrement</h2>
+        <p>Enregistrer vos differrents champs</p>
       </div>
 
       
@@ -227,7 +227,19 @@ if(isset($_POST['enregistrer']))
 
       <form action="" method="post" role="form" class="php-email-form mt-4">
         <div class="columns">
-          <div class="col-md-6 form-group">
+            <?php
+                $nbre_maximum=7;
+                for($i=0; $i!= $nbre_maximum ; $i++) 
+                { 
+                    ?>
+                    <div class="col-md-6 form-group">
+                    <input type="text" name="name" class="form-control" id="<?php echo "name $i"; ?>" placeholder="Your Name" required>
+                    </div><br><br> 
+                    <?php ;
+                } 
+            
+           ?>
+          <!-- <div class="col-md-6 form-group">
             <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
           </div>
           <br><br>
@@ -242,11 +254,11 @@ if(isset($_POST['enregistrer']))
         </div>
         <div class="col-md-6 form-group ">
           <input type="password" class="form-control" name="mdp" id="mdp" placeholder="Password" required>
-        </div>
+        </div> -->
         
         
         <br><br>
-        <div class="text-left"><button type="submit" name="enregistrer">Se connecter</button></div>
+        <div class="text-left"><button type="submit" name="enregistrer">Remplir sa facture</button></div>
         <div class="text-center">
        Pas encore inscrit ? <a href="inscription.php">Inscrivez vous</a>
        </div>

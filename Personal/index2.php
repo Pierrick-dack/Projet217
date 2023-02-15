@@ -133,13 +133,15 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link active" href="#header">Home</a></li>
+          <li><a class="nav-link" href="#contact">Conception de facture</a></li>
+          <li><a class="nav-link" href="#resume">Liste de facture disponible</a></li>
           <li><a class="nav-link" href="#about">About</a></li>
-          <li><a class="nav-link" href="#resume">Resume</a></li>
+          
           <!-- <li><a class="nav-link" href="#services">Services</a></li>
           <li><a class="nav-link" href="#portfolio">Portfolio</a></li> -->
-          <li><a class="nav-link" href="#contact">Contact</a></li>
-          <li><a href="inscription.php"><button type="button" class="btn btn-success">S'inscrire</button></a></li>
-          <li><a href="connection.php"><button type="button" class="btn btn-primary">Se connecter</button></a></li>
+          
+          
+          <li><a href="connection.php"><button type="button" class="btn btn-primary">Se deconnecter</button></a></li>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
@@ -439,19 +441,19 @@
       </div>
 
       <div class="row">
-          <div class="col-lg-6">
-            <h3 class="resume-title">Sumary</h3>
-            <div class="resume-item pb-0">
-              <h4>Alice Barkley</h4>
-              <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
-              <p>
-              <ul>
-                <li>Portland par 127,Orlando, FL</li>
-                <li>(123) 456-7891</li>
-                <li>alice.barkley@example.com</li>
-              </ul>
-              </p>
-            </div>
+        <div class="col-lg-6">
+          <h3 class="resume-title">Sumary</h3>
+          <div class="resume-item pb-0">
+            <h4>Alice Barkley</h4>
+            <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
+            <p>
+            <ul>
+              <li>Portland par 127,Orlando, FL</li>
+              <li>(123) 456-7891</li>
+              <li>alice.barkley@example.com</li>
+            </ul>
+            </p>
+          </div>
 
           <h3 class="resume-title">Education</h3>
           <div class="resume-item">
@@ -721,79 +723,67 @@
 
   <!-- ======= Contact Section ======= -->
   <section id="contact" class="contact">
+    
     <div class="container">
+    
+    
+    
 
-      <div class="section-title">
-        <h2>Contact</h2>
-        <p>Contact Me</p>
-      </div>
-
-      <div class="row mt-2">
-
-        <div class="col-md-6 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-map"></i>
-            <h3>My Address</h3>
-            <p>A108 Adam Street, New York, NY 535022</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-share-alt"></i>
-            <h3>Social Profiles</h3>
-            <div class="social-links">
-              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <div class="row">
+          <div class="col-lg-6">
+            <h3 class="resume-title">Sumary</h3>
+            <div class="resume-item pb-0">
+              <h4>Alice Barkley</h4>
+              <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
+              <p>
+              <ul>
+                <li>Portland par 127,Orlando, FL</li>
+                <li>(123) 456-7891</li>
+                <li>alice.barkley@example.com</li>
+              </ul>
+              </p>
             </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-envelope"></i>
-            <h3>Email Me</h3>
-            <p>contact@example.com</p>
-          </div>
-        </div>
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-phone-call"></i>
-            <h3>Call Me</h3>
-            <p>+1 5589 55488 55</p>
-          </div>
-        </div>
+            </div>
+      <div class="section-title">
+        <h2>Information</h2>
+        <p>Renseigner les informations de la facture</p>
       </div>
 
-      <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
-        <div class="row">
+      
+
+        
+
+      <form action="" method="post" role="form" class="php-email-form mt-4">
+        <div class="columns">
           <div class="col-md-6 form-group">
-            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+          <label for="color" class="form-label mt-4">Couleur de la facture</label>
+          <select  class="form-select" id="colors">
+                <option style="background-color:black;">noir</option>
+                <option style="background-color:red;">rouge</option>
+                <option style="background-color:green;">vert</option>
+                <option style="background-color:gray;">gris</option>
+                <option style="background-color:yellow;">jaune</option>
+         </select>
           </div>
-          <div class="col-md-6 form-group mt-3 mt-md-0">
-            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+          <br><br>
+          <div class="col-md-6 form-group">
+            <input type="text" name="nbc" class="form-control" id="nbc" placeholder="Nombre de champs" required>
           </div>
-        </div>
-        <div class="form-group mt-3">
-          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-        </div>
-        <div class="form-group mt-3">
-          <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-        </div>
-        <div class="my-3">
-          <div class="loading">Loading</div>
-          <div class="error-message"></div>
-          <div class="sent-message">Your message has been sent. Thank you!</div>
-        </div>
-        <div class="text-center"><button type="submit">Send Message</button></div>
+          <br><br>
+          
+        
+        
+        
+        <br><br>
+        <div class="text-left"><button type="submit" name="enregistrer">Faire sa facture</button></div>
+        <div class="text-center">
+       Pas encore inscrit ? <a href="enregchamp.php">Inscrivez vous</a>
+       </div>
       </form>
+     
 
     </div>
   </section><!-- End Contact Section -->
-
   <div class="credits">
     <!-- All the links in the footer should remain intact. -->
     <!-- You can delete the links only if you purchased the pro version. -->
