@@ -10,16 +10,18 @@ if(!isset($_SESSION['user'])){
 
 if(isset($_POST['enregistrer']))
 {
-        $s='b';
-        $t='n';
-        $u=$t.$s;
-        $nb = $_POST[$u]; 
+        
+        $nb = $_POST['nb']; 
         $color = $_POST['color'];
         $entrep = $_POST['entrep'];
         $client = $_POST['client'];
         $c=intval($_POST['cmp']);
         $_SESSION['nb']=$nb;
         $_SESSION['champ']=$c;
+        $_SESSION['color']=$color;
+        $_SESSION['client']=$client;
+        $_SESSION['entrep']=$entrep;
+
         
         for($n=1; $n<= intval($_POST['cmp']) ; $n++)
         {
@@ -37,11 +39,14 @@ if(isset($_POST['enregistrer']))
                   }
                   $insert = $bdd->prepare('INSERT INTO template(NOM_TEMPLATE,COULEUR,NB_LIGNE)VALUES(:nom,:color,:nb)');
                   $insert->execute(array(
-                  'nom' => $_SESSION['user'],
+                  'nom' => $_SESSION['ident'],
                    'color' => $color,
                    'nb' => $nb
                          
                   ));
+
+
+                  
               
 }
 
@@ -215,7 +220,7 @@ if(isset($_POST['enregistrer']))
 
         
 
-      <form action="" method="post" role="form" class="php-email-form mt-4">
+      <form action="pdf.php" method="post" role="form" class="php-email-form mt-4">
         <div class="columns">
         <!-- <div class="col-md-6 form-group"> -->
           <!-- <label for="id" class="form-label mt-4">numero</label>
@@ -255,8 +260,7 @@ if(isset($_POST['enregistrer']))
         </div> -->
         
         <div class="text-right"><button type="submit" name="enregistrer" style="font-weight:bold;text-align:center;">Valider</button></div><br><br>
-        <button type="button" class="btn btn-outline-primary" onclick="generatepdf();" id="plus">Generer le pdf</button>
-        <button type="button" class="btn btn-outline-info" id="moins" OnClick="javascript:window.print()">Imprimer</button>
+        
        
         <div class="table-responsive" id="tableres">
         <div class="row pt-5">
@@ -300,20 +304,20 @@ if(isset($_POST['enregistrer']))
               <table class="table mt-3 table-striped" id="table" style="border-color:<?php echo "$color"; ?>;width:100%;font-weight:bold;color:white;">
                 <thead style="width:100%;font-weight:bold;color:white;">
                   <tr style="width:100%;font-weight:bold;color:white;">
-                    <th>supprimer</th>
-                    <th>#</th>
-                    <?php
-                          
-                          for($n=1; $n<= intval($_POST['cmp']) ; $n++) 
-                          { 
-                              ?>
-                              <th><?php echo $_POST['txt'.$n] ;?></th>
-                              <?php ;
-                          } 
+                    <!-- <th>supprimer</th> -->
+                    <!-- <th>#</th> -->
+                      <?php
+                            
+                            for($n=1; $n<= intval($_POST['cmp']) ; $n++) 
+                            { 
+                                ?>
+                                <th><input type="text" name="<?php echo 'text'.$n ;?>" placeholder="<?php echo $_POST['txt'.$n] ;?>"></th>
+                                <?php ;
+                            } 
+                        
+                      ?>
                       
-                    ?>
-                    
-                    <th>prix total</th>
+                      <th>prix total</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -321,8 +325,8 @@ if(isset($_POST['enregistrer']))
                   for($i=0; $i<$nb ; $i++){ 
                     ?>
                     <tr>
-                      <td><button type="button" class="btn btn-outline-danger" id="plus">x</button></td>
-                      <td><input type="text" ></td>
+                      <!-- <td><button type="button" class="btn btn-outline-danger" id="plus">x</button></td> -->
+                      <!-- <td><input type="text" ></td> -->
                       <?php
                             for($n=1; $n<= intval($_POST['cmp']) ; $n++) 
                             { 
@@ -331,7 +335,7 @@ if(isset($_POST['enregistrer']))
                                 <?php ;
                             } 
                       ?>
-                      <td><input type="text" name="pt[]" class="prix"  id="<?php echo 'pt'.$i ;?>"></td>
+                      <td><input type="text" name="<?php echo 'pt'.$i ;?>" class="prix"  id="<?php echo 'pt'.$i ;?>"></td>
                     </tr>
                     <?php ;
                     }

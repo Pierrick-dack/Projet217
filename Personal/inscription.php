@@ -35,6 +35,8 @@ if(isset($_POST['enregistrer']))
                         
 
                         $_SESSION['user']=$nom;
+                        $_SESSION['ident']=$ident;
+
                         header('Location: index2.php?reg_err=success');
                     }
                     else
