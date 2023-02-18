@@ -1,0 +1,68 @@
+var i=0;
+    function addinput()
+    {
+        i++;/*
+        document.getElementById("frm" ).innerHTML += "<br /><input name='txt"+i+"' type='text' value='' />";*/
+         
+        var frm = document.getElementById("frm"); //le noeud parent
+         
+        // creation d'un champ
+        var inpt = document.createElement('input');
+        inpt.setAttribute('name','txt'+i);
+        inpt.setAttribute('type','text');
+        frm.appendChild(inpt);
+         
+        // retour a la ligne aprés l'ajout
+        var br = document.createElement('br');
+        frm.appendChild(br);
+         
+        //Incrementation du compteur i (nombre de champ)
+        document.getElementById("cmp" ).value=i;
+    }
+
+    function somme(){
+        var id=this.getAttribute("id");
+        var numero=id.substring(id.length-1,id.length);
+        var prix1=document.getElementById("pt"+numero);
+        prixx=document.getElementsByClassName("prix");
+        var prixtotal=0;
+        for (var i=0;i<prixx.length;i++){
+         prixtotal=prixtotal+parseInt(prixx[i].value);
+
+        }
+
+        var total = document.getElementById("totaux");
+        if (!isNaN(prixtotal)) totaux.value=prixtotal;
+        }
+
+        var element=document.getElementsByClassName("prix");
+        for(var i=0;i<element.length;i++){
+            element[i].addEventListener("change",somme,false);
+        }
+
+        var plus = document.getElementById("plus");
+        plus.addEventListener('click',ajoutLigne,false);
+
+
+        function creationLigne(name,id,tr,table){
+            var td=document.createElement("td");
+            var input=document.createElement("input");
+            input.setAttribute("type","text");
+            input.setAttribute("name",name);
+            input.setAttribute("id",id);
+            table.appendChild(tr);
+
+
+        }
+
+        function ajoutLigne(){
+            var table=document.getElementById("table");
+            var tr=document.createElement("tr");
+            creationLigne("pt[]","pt1",tr,table);
+        }
+
+
+        var table= document.getElementById("table");
+    
+
+

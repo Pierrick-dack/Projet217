@@ -30,12 +30,12 @@ if(isset($_POST['enregistrer']))
                             'nom' => $nom,
                             'ident' => $ident,
                             'password' => $password
-                            
-
-                            
                         ));
+
+                        
+
                         $_SESSION['user']=$nom;
-                        header('Location: index.php?reg_err=success');
+                        header('Location: index2.php?reg_err=success');
                     }
                     else
                     {

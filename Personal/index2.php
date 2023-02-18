@@ -18,6 +18,8 @@
   <title>Services facturing</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="assets/js/ajoutpdf.js"></script>
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -141,7 +143,7 @@
           <li><a class="nav-link" href="#portfolio">Portfolio</a></li> -->
           
           
-          <li><a href="connection.php"><button type="button" class="btn btn-primary">Se deconnecter</button></a></li>
+          <li><a href="deconnexion.php"><button type="button" class="btn btn-primary">Se deconnecter</button></a></li>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
@@ -436,68 +438,26 @@
     <div class="container">
 
       <div class="section-title">
-        <h2>Resume</h2>
-        <p>Check My Resume</p>
+        <h2>Liste</h2>
+        <p>Liste de facture</p>
       </div>
 
       <div class="row">
         <div class="col-lg-6">
-          <h3 class="resume-title">Sumary</h3>
+          <h3 class="resume-title"></h3>
           <div class="resume-item pb-0">
-            <h4>Alice Barkley</h4>
-            <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
+            <h4>Liste facture</h4>
+            <p><em></em></p>
             <p>
             <ul>
-              <li>Portland par 127,Orlando, FL</li>
-              <li>(123) 456-7891</li>
-              <li>alice.barkley@example.com</li>
+              <li></li>
+              <li></li>
+              <li></li>
             </ul>
             </p>
           </div>
 
-          <h3 class="resume-title">Education</h3>
-          <div class="resume-item">
-            <h4>Master of Fine Arts &amp; Graphic Design</h4>
-            <h5>2015 - 2016</h5>
-            <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-            <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
-          </div>
-          <div class="resume-item">
-            <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-            <h5>2010 - 2014</h5>
-            <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-            <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <h3 class="resume-title">Professional Experience</h3>
-          <div class="resume-item">
-            <h4>Senior graphic design specialist</h4>
-            <h5>2019 - Present</h5>
-            <p><em>Experion, New York, NY </em></p>
-            <p>
-            <ul>
-              <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-              <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-              <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-              <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
-            </ul>
-            </p>
-          </div>
-          <div class="resume-item">
-            <h4>Graphic design specialist</h4>
-            <h5>2017 - 2018</h5>
-            <p><em>Stepping Stone Advertising, New York, NY</em></p>
-            <p>
-            <ul>
-              <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-              <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-              <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-              <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-            </ul>
-            </p>
-          </div>
-        </div>
+          
       </div>
 
     </div>
@@ -722,6 +682,31 @@
   <!-- End Portfolio Section -->
 
   <!-- ======= Contact Section ======= -->
+  <script>
+    var i=0;
+    function addinput()
+    {
+        i++;/*
+        document.getElementById("frm" ).innerHTML += "<br /><input name='txt"+i+"' type='text' value='' />";*/
+         
+        var frm = document.getElementById("frm"); //le noeud parent
+         
+        // creation d'un champ
+        var inpt = document.createElement('input');
+        inpt.setAttribute('name','txt'+i);
+        inpt.setAttribute('type','text');
+        frm.appendChild(inpt);
+         
+        // retour a la ligne aprés l'ajout
+        var br = document.createElement('br');
+        
+        frm.appendChild(br);
+        
+         
+        //Incrementation du compteur i (nombre de champ)
+        document.getElementById("cmp" ).value=i;
+    }
+</script>
   <section id="contact" class="contact">
     
     <div class="container">
@@ -731,17 +716,19 @@
 
       <div class="row">
           <div class="col-lg-6">
-            <h3 class="resume-title">Sumary</h3>
+            <h3 class="resume-title">utilisation</h3>
             <div class="resume-item pb-0">
-              <h4>Alice Barkley</h4>
-              <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
+              
+              <p><em>Dans cette partie pour avoir une facture conforme  vous devez:</em></p>
               <p>
               <ul>
-                <li>Portland par 127,Orlando, FL</li>
-                <li>(123) 456-7891</li>
-                <li>alice.barkley@example.com</li>
+                <li>Remplir les informations de l'entreprise,du client ainsi que la date</li>
+                <li>Choisir la couleur de la facture</li>
+                <li>Choisir le nombre de ligne</li>
+                <li>ajouter les differnts champs que vous vouliez avoir</li>
               </ul>
               </p>
+              <p><em>les champs #,total sont attribué automatiquement</em></p>
             </div>
             </div>
       <div class="section-title">
@@ -753,31 +740,43 @@
 
         
 
-      <form action="" method="post" role="form" class="php-email-form mt-4">
+      <form action="enregchamp.php" method="post" role="form" class="php-email-form mt-4">
         <div class="columns">
           <div class="col-md-6 form-group">
           <label for="color" class="form-label mt-4">Couleur de la facture</label>
-          <select  class="form-select" id="colors">
-                <option style="background-color:black;">noir</option>
-                <option style="background-color:red;">rouge</option>
-                <option style="background-color:green;">vert</option>
-                <option style="background-color:gray;">gris</option>
-                <option style="background-color:yellow;">jaune</option>
+          <select  class="form-select" id="colors" name="color">
+                <option value= "black" style="background-color:black;">noir</option>
+                <option value= "red" style="background-color:red;">rouge</option>
+                <option value= "green" style="background-color:green;">vert</option>
+                <option value= "gray" style="background-color:gray;">gris</option>
+                <option value= "yellow" style="background-color:yellow;">jaune</option>
          </select>
           </div>
           <br><br>
+          <div class="col-md-6 form-group ">
+            <input type="text" class="form-control" name="nb" id="nb" placeholder="Nombre de ligne" required>
+          </div><br>
+          <div class=" form-group mt-3">
+            <label for="entrep" class="form-label mt-4">Informations de l'entreprise</label>
+            <textarea name="entrep" id="entrep" cols="30"  rows="5"  class="form-control"></textarea>
+          </div><br><br>
+          <div class=" form-group mt-3">
+            <label for="client" class="form-label mt-4">Informations du client</label>
+            <textarea name="client" id="client" cols="30"  rows="5"  class="form-control"></textarea>
+          </div><br><br>
+
           <div class="col-md-6 form-group">
-            <input type="text" name="nbc" class="form-control" id="nbc" placeholder="Nombre de champs" required>
+            <!-- <input type="text" name="nbc"  id="nbc" placeholder="valeur de champ" required> -->
+            <input  type="hidden" class="form-control" placeholder="valeur de champ" required value="javascript:i;" name="cmp" id="cmp" >
+            <label for="label" class="form-label mt-4">nom des differents champs</label>
+            <div id="frm" placeholder="valeur de champ" ></div><br>
+            <input type='button' id='ajIn' value='ajouter un champ' onClick='addinput()' > 
           </div>
           <br><br>
-          
-        
-        
-        
         <br><br>
         <div class="text-left"><button type="submit" name="enregistrer">Faire sa facture</button></div>
         <div class="text-center">
-       Pas encore inscrit ? <a href="enregchamp.php">Inscrivez vous</a>
+       Pas encore inscrit ? <a href="inscription.php">Inscrivez vous</a>
        </div>
       </form>
      

@@ -1,10 +1,10 @@
 <?php
  
- require_once 'config.php'; 
- if(!isset($_SESSION['user'])){
-     header('Location:inscription.php');
-     die();
- }
+//  require_once 'config.php'; 
+//  if(!isset($_SESSION['user'])){
+//      header('Location:inscription.php');
+//      die();
+//  }
 ?>
 
 
@@ -148,7 +148,7 @@
         <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
         <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        <h2>Bienvenue <span><?php echo $_SESSION['user']; ?></span></h2>
+        
       </div> 
 
     </div>
@@ -310,7 +310,7 @@
     <div class="interests container">
 
       <div class="section-title">
-        <h2>Bill color</h2>
+        <h2>couleur de facture disponible color</h2>
       </div>
 
       <div class="row">
@@ -356,10 +356,10 @@
             <div class="testimonial-item">
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
-              <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+              <img src="assets/img/testimonials/" class="testimonial-img" alt="">
               <h3>Kamela Pierrick</h3>
               <h4>Chief project</h4>
             </div>
@@ -369,12 +369,12 @@
             <div class="testimonial-item">
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
-              <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+              <img src="assets/img/testimonials/testimonials-4.jpeg" class="testimonial-img" alt="">
               <h3>Atangana J. Pierre</h3>
-              <h4>Designer</h4>
+              <h4>MOE1</h4>
             </div>
           </div><!-- End testimonial item -->
 
@@ -382,12 +382,12 @@
             <div class="testimonial-item">
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
-              <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+              <img src="assets/img/testimonials/testimonials-3.jpeg" class="testimonial-img" alt="">
               <h3>Tatsambon Franck</h3>
-              <h4>Store Owner</h4>
+              <h4>QA</h4>
             </div>
           </div><!-- End testimonial item -->
 
@@ -395,12 +395,12 @@
             <div class="testimonial-item">
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
-              <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+              <img src="assets/img/testimonials/testimonials-2.jpeg" class="testimonial-img" alt="">
               <h3>Djumeghe Sibelle</h3>
-              <h4>Freelancer</h4>
+              <h4>RVR</h4>
             </div>
           </div><!-- End testimonial item -->
 
@@ -408,12 +408,12 @@
             <div class="testimonial-item">
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
-              <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+              <img src="assets/img/testimonials/testimonials-1.jpeg" class="testimonial-img" alt="">
               <h3>Matagang Emmanuella</h3>
-              <h4>Entrepreneur</h4>
+              <h4>MOA</h4>
             </div>
           </div><!-- End testimonial item -->
 
@@ -434,68 +434,41 @@
     <div class="container">
 
       <div class="section-title">
-        <h2>Resume</h2>
-        <p>Check My Resume</p>
+        <h2>utilisation</h2>
+        <p>utilisation d'application</p>
       </div>
 
       <div class="row">
           <div class="col-lg-6">
             <h3 class="resume-title">Sumary</h3>
             <div class="resume-item pb-0">
-              <h4>Alice Barkley</h4>
-              <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
+              <h4>Facturing Apps</h4>
+              <p><em>Notre application est une application de gestion de facture elle permet entre autre:</em></p>
               <p>
               <ul>
-                <li>Portland par 127,Orlando, FL</li>
-                <li>(123) 456-7891</li>
-                <li>alice.barkley@example.com</li>
+                <li>Faire une facture pour n'importe quel service</li>
+                <li>consulter la liste des differnts models de facture</li>
+                <li>choisir ses couleurs pour chaque facture</li>
               </ul>
               </p>
             </div>
 
-          <h3 class="resume-title">Education</h3>
+          <h3 class="resume-title">fonctionnement</h3>
           <div class="resume-item">
-            <h4>Master of Fine Arts &amp; Graphic Design</h4>
-            <h5>2015 - 2016</h5>
-            <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-            <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
-          </div>
-          <div class="resume-item">
-            <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-            <h5>2010 - 2014</h5>
-            <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-            <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <h3 class="resume-title">Professional Experience</h3>
-          <div class="resume-item">
-            <h4>Senior graphic design specialist</h4>
-            <h5>2019 - Present</h5>
-            <p><em>Experion, New York, NY </em></p>
+            <h4>Guide d'utilisation</h4>
+            <p><em>Pour utiliser notre application vous devez d'abord vous <a href="inscription.php">inscrire</a> ensuite:</em></p>
             <p>
-            <ul>
-              <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-              <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-              <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-              <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
-            </ul>
-            </p>
+              <ul>
+                <li>Se connecter</li>
+                <li>Remplir le modele de facture que vous voulez avoir</li>
+                <li>Remplir la facture proprement dite</li>
+                <li>Imprimer ou enregistrer celle ci</li>
+              </ul>
+              </p>
           </div>
-          <div class="resume-item">
-            <h4>Graphic design specialist</h4>
-            <h5>2017 - 2018</h5>
-            <p><em>Stepping Stone Advertising, New York, NY</em></p>
-            <p>
-            <ul>
-              <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-              <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-              <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-              <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-            </ul>
-            </p>
-          </div>
+        
         </div>
+        
       </div>
 
     </div>
@@ -725,18 +698,12 @@
 
       <div class="section-title">
         <h2>Contact</h2>
-        <p>Contact Me</p>
+        <p>nous contacter</p>
       </div>
 
       <div class="row mt-2">
 
-        <div class="col-md-6 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-map"></i>
-            <h3>My Address</h3>
-            <p>A108 Adam Street, New York, NY 535022</p>
-          </div>
-        </div>
+        
 
         <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
           <div class="info-box">
@@ -752,45 +719,10 @@
           </div>
         </div>
 
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-envelope"></i>
-            <h3>Email Me</h3>
-            <p>contact@example.com</p>
-          </div>
-        </div>
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-phone-call"></i>
-            <h3>Call Me</h3>
-            <p>+1 5589 55488 55</p>
-          </div>
-        </div>
+        
       </div>
 
-      <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
-        <div class="row">
-          <div class="col-md-6 form-group">
-            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-          </div>
-          <div class="col-md-6 form-group mt-3 mt-md-0">
-            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-          </div>
-        </div>
-        <div class="form-group mt-3">
-          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-        </div>
-        <div class="form-group mt-3">
-          <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-        </div>
-        <div class="my-3">
-          <div class="loading">Loading</div>
-          <div class="error-message"></div>
-          <div class="sent-message">Your message has been sent. Thank you!</div>
-        </div>
-        <div class="text-center"><button type="submit">Send Message</button></div>
-      </form>
-
+      
     </div>
   </section><!-- End Contact Section -->
 
